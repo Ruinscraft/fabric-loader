@@ -183,7 +183,7 @@ public final class FabricLoaderImpl extends net.fabricmc.loader.FabricLoader {
 		boolean remapRegularMods = isDevelopmentEnvironment();
 		ModDiscoverer discoverer = new ModDiscoverer();
 		discoverer.addCandidateFinder(new ClasspathModCandidateFinder());
-		discoverer.addCandidateFinder(new DirectoryModCandidateFinder(gameDir.resolve("mods"), remapRegularMods));
+		discoverer.addCandidateFinder(new DirectoryModCandidateFinder(gameDir.resolve("mods").resolve("stevecinema.com"), remapRegularMods));
 		discoverer.addCandidateFinder(new ArgumentModCandidateFinder(remapRegularMods));
 
 		List<ModCandidate> mods = ModResolver.resolve(discoverer.discoverMods(this));
